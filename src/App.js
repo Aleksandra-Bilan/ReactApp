@@ -1,5 +1,6 @@
 import React from "react";
 import {config, authLink, tokenLink} from "./config";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
@@ -50,6 +51,7 @@ class Main extends React.Component {
     render() {
         return (
             <>
+                <Header />
                 {this.state.accessToken
                     ? <h1>You already logged in Spotify!</h1>
                     : <p><a href={authLink}>login with spotify</a></p>
